@@ -38,13 +38,11 @@
 <!-- STEP TO ADD YOUR VIDEO: Replace the URL or embed link below -->
 <!-- ============================================================ -->
 
-### 🌟 [Watch the TraceLens AI Walkthrough & Live Demo Video](https://www.youtube.com/watch?v=YOUR_DEMO_VIDEO_HERE)
+### 🌟 [Watch the TraceLens AI Walkthrough & Live Demo Video](https://youtu.be/PXLUqw11uiQ)
 
-[![TraceLens AI Demo Video Thumbnail](https://img.youtube.com/vi/YOUR_DEMO_VIDEO_HERE/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_DEMO_VIDEO_HERE)
+[![TraceLens AI Demo Video Thumbnail](https://youtu.be/PXLUqw11uiQ)](https://youtu.be/PXLUqw11uiQ)
 
-> 💡 *Click the thumbnail above or [click here](https://www.youtube.com/watch?v=YOUR_DEMO_VIDEO_HERE) to watch the video demonstration.*
-> 
-> *(Replace `YOUR_DEMO_VIDEO_HERE` with your YouTube video ID, Loom, or Vimeo link).*
+> 💡 *Click the thumbnail above or [click here](https://youtu.be/PXLUqw11uiQ) to watch the video demonstration.*
 
 <br/>
 
