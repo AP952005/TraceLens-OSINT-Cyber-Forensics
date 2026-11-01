@@ -86,47 +86,47 @@ Powered by **Tambo AI's Generative UI (GenUI)**, TraceLens solves the "dashboard
 
 ```mermaid
 flowchart TD
-    User([Investigator / Analyst])
+    User["Investigator / Analyst"]
 
     subgraph Client ["Frontend: Next.js 15 (App Router)"]
-        Terminal[Cyberpunk Terminal UI]
-        Chat[Tambo Assistant Thread]
-        GenUIHost[Generative UI Viewport]
+        Terminal["Cyberpunk Terminal UI"]
+        Chat["Tambo Assistant Thread"]
+        GenUIHost["Generative UI Viewport"]
         
         subgraph MountedComponents ["Dynamic GenUI Components"]
-            EvGraph[EvidenceGraph (React Flow)]
-            Timeline[TimelineView Component]
-            BreachList[BreachDetails Component]
-            RiskGauge[RiskScore Meter]
+            EvGraph["EvidenceGraph (React Flow)"]
+            Timeline["TimelineView Component"]
+            BreachList["BreachDetails Component"]
+            RiskGauge["RiskScore Meter"]
         end
     end
 
     subgraph TamboCore ["Tambo AI Engine"]
-        TamboProvider[TamboProvider & Registry]
-        ToolRouter[Tambo Tool Dispatcher]
-        LLMStream[Generative UI Streaming Engine]
+        TamboProvider["TamboProvider & Registry"]
+        ToolRouter["Tambo Tool Dispatcher"]
+        LLMStream["Generative UI Streaming Engine"]
     end
 
     subgraph BackendServices ["Backend / Forensic Engines"]
-        ScanTool[OSINT Scanner (Serper API)]
-        BreachTool[Breach & Credential Inspector]
-        GraphTool[Evidence Node-Link Generator]
-        CaseDB[(Local DB / Case Memory)]
+        ScanTool["OSINT Scanner (Serper API)"]
+        BreachTool["Breach & Credential Inspector"]
+        GraphTool["Evidence Node-Link Generator"]
+        CaseDB[("Local DB / Case Memory")]
     end
 
-    User -->|Prompt: 'Show evidence graph'| Chat
+    User --> Chat
     Chat --> TamboProvider
     TamboProvider --> LLMStream
     LLMStream --> ToolRouter
 
-    ToolRouter -->|Invoke| ScanTool
-    ToolRouter -->|Invoke| BreachTool
-    ToolRouter -->|Invoke| GraphTool
+    ToolRouter --> ScanTool
+    ToolRouter --> BreachTool
+    ToolRouter --> GraphTool
 
     GraphTool --> CaseDB
     ScanTool --> CaseDB
 
-    LLMStream -->|Stream Component Specs| GenUIHost
+    LLMStream --> GenUIHost
     GenUIHost --> EvGraph
     GenUIHost --> Timeline
     GenUIHost --> BreachList
